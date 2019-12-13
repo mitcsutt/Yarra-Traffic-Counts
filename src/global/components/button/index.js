@@ -8,7 +8,7 @@ import classNames from 'classnames';
  * Internal Dependencies
  */
 
-const Heading = ({ onClick = () => null, classes, type = "", value = "", disabled = false, children }) => {
+const Button = ({ onClick = () => null, classes, type = "", value = "", disabled = false, children }) => {
 	const buttonClassName = classNames('button', classes);
 	return (
 		<button
@@ -21,4 +21,4 @@ const Heading = ({ onClick = () => null, classes, type = "", value = "", disable
 		</button>
 	);
 }
-export default Heading;
+export default Button;

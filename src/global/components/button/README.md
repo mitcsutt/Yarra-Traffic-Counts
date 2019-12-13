@@ -17,9 +17,9 @@ Props
 Example
 =======
 
-    import Button from 'global/components/layout';
+    import Button from 'global/components/button';
 
-    const ExampleLayout = () => {
+    const ExampleButtont = () => {
         return (
             <Button classes="example__button" onClick={null} type='submit' disabled>
                 Button
