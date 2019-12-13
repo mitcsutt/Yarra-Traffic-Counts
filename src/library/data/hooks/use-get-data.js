@@ -37,13 +37,13 @@ export default () => {
             const key = curr['date_captured'];
             const val = parseInt(curr['volume_per_day']);
             if (!count[key]) {
-                count[key] = { sum: val, data: { x: key, y: val } };
+                count[key] = { sum: val, data: { date_captured: key, volume_per_day: val } };
                 count[key].data.count = 1;
                 acc.push(count[key].data);
             }
             else {
                 count[key].sum += val;
-                count[key].data.y = Math.round(count[key].sum / ++count[key].data.count);
+                count[key].data.volume_per_day = Math.round(count[key].sum / ++count[key].data.count);
             }
             return acc;
 

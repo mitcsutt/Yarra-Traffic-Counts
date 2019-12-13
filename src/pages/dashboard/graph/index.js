@@ -12,6 +12,7 @@ import useGetData from 'library/data/hooks/use-get-data';
 const Graph = () => {
 	const [data, fetching, getData] = useGetData();
 
+
 	useEffect(() => {
 		getData();
 	}, []);
@@ -28,8 +29,10 @@ const Graph = () => {
 					data={data}
 					animate={{
 						duration: 2000,
-						onLoad: { duration: 1000 }
+						onLoad: { duration: 1000 },
 					}}
+					x={(data) => new Date(data.date_captured)}
+					y="volume_per_day"
 				/>
 			</VictoryChart>
 		</View>);
