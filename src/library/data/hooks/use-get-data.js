@@ -22,14 +22,37 @@ export default () => {
 
         if (response.success) {
             const { records } = response.result;
-            const dataFormatted = records.map((record) => {
-                const { date_captured, volume_per_day } = record;
-                return { date_captured, volume_per_day }
-            })
+
+            const dataFormatted = aggregate(records);
+            console.log(dataFormatted);
             setData(dataFormatted);
         }
         setFetching(false)
     }
 
+
+    const aggregate = (raw) => {
+        let count = {};
+        const aggregatedData = raw.reduce((acc, curr) => {
+            const key = curr['date_captured'];
+            const val = parseInt(curr['volume_per_day']);
+            if (!count[key]) {
+                count[key] = { sum: val, data: { x: key, y: val } };
+                count[key].data.count = 1;
+                acc.push(count[key].data);
+            }
+            else {
+                count[key].sum += val;
+                count[key].data.y = Math.round(count[key].sum / ++count[key].data.count);
+            }
+            return acc;
+
+        }, []);
+
+        return aggregatedData;
+
+    }
+
     return [data, fetching, getData];
 };
+
