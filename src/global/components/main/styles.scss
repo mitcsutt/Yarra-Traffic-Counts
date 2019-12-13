@@ -1,6 +1,13 @@
 .main {
-  min-width: 50vw;
-  min-height: 50vh;
   text-align: center;
   align-items: center;
+  min-height: 50vh;
+
+
+  @include medium-down {    
+    min-width: 75vw;
+ }
+ @include medium-up {    
+  min-width: 50vw;
+}
 }
