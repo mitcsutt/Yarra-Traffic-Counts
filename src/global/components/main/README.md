@@ -1,7 +1,7 @@
-Page
+Main
 =====
 
-Page is the component that wraps all elements of each individual 'page'
+Main is used to hold the main container of what is being displayed on the screen. It helps with sizing.
 ******
 Props
 =====
@@ -13,12 +13,12 @@ Props
 Example
 =======
 
-    import Page from 'global/components/page';
+    import Main from 'global/components/main';
 
-    const ExamplePage = () => {
+    const ExampleMain = () => {
         return (
-            <Page classes = 'example-page'>
+            <Main classes = 'example-main'>
                 Example Text
-            </Page>
+            </Main>
         )
     }

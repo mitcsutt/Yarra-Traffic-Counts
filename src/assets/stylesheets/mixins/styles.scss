@@ -1,0 +1,19 @@
+@mixin small {
+    @media (max-width: $small) { @content; }
+  }
+  @mixin small-up {
+    @media (min-width: $small+1) { @content; }
+  }
+  @mixin medium-down {
+    @media (max-width: $medium) { @content; }
+  }
+  @mixin medium-up {
+    @media (min-width: $medium+1) { @content; }
+  }
+  @mixin large-down {
+    @media (max-width: $large) { @content; }
+  }
+  @mixin large {
+    @media (min-width: $large+1) { @content; }
+  }
+
