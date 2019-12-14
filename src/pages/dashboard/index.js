@@ -8,6 +8,7 @@ import React, { useState } from 'react';
 import Page from 'global/components/page';
 import Layout from 'global/components/layout';
 import Main from 'global/components/main';
+import Card from 'global/components/card';
 import Header from 'global/components/header';
 
 import Button from 'global/components/button';
@@ -23,7 +24,9 @@ const Dashboard = () => {
 					<Header type='h1' value='Sample Text'>
 						<Button classes="header__button" onClick={null}>Button</Button>
 					</Header>
-					<Graph></Graph>
+					<Card classes='graph-card'>
+						<Graph></Graph>
+					</Card>
 				</Main>
 			</Layout>
 		</Page>);

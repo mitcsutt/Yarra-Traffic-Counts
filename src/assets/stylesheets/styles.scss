@@ -3,12 +3,14 @@
 @import "assets/stylesheets/variables/styles.scss";
 @import "assets/stylesheets/global/styles.scss";
 @import "assets/stylesheets/mixins/styles.scss";
+@import "assets/stylesheets/keyframes/styles.scss";
 
 /* components */
 @import "global/components/view/styles.scss";
 @import "global/components/page/styles.scss";
 @import "global/components/layout/styles.scss";
 @import "global/components/main/styles.scss";
+@import "global/components/card/styles.scss";
 @import "global/components/header/styles.scss";
 @import "global/components/button/styles.scss";
 
