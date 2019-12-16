@@ -2,6 +2,8 @@
  * External Dependencies
  */
 import React, { useEffect, useState } from 'react';
+import ReactLoading from 'react-loading';
+
 /**
  * Internal Dependencies
  */
@@ -33,9 +35,9 @@ const Dashboard = () => {
 
 	return (
 		<Page classes='page-dashboard'>
-			<Layout classes='layout-dashboard' center>
+			<Layout classes='layout-dashboard' top>
 				<Main classes='main-dashboard'>
-					<Header type='h1' value='Sample Text'>
+					<Header type='h1' value='Yarra Trams analysis'>
 						<Button onClick={changeView} classes="header__button">{viewTable ? "Graph" : "Table"}</Button>
 					</Header>
 					<Card classes='graph-card'>

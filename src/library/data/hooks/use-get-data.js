@@ -49,6 +49,13 @@ export default () => {
 
         }, []);
 
+        // sort by value
+        aggregatedData.sort(function (a, b) {
+            const date1 = new Date(a.date_captured);
+            const date2 = new Date(b.date_captured);
+            return date1 - date2;
+        });
+
         return aggregatedData;
 
     }

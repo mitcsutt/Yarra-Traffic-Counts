@@ -21,6 +21,7 @@ import usePagination from "global/hooks/use-pagination";
 import View from 'global/components/view';
 
 const Table = ({ classes = '', data = [] }) => {
+
     const [pagination, dispatch] = usePagination(data.length, 5);
     const paginatedData = slice(
         data,
@@ -37,7 +38,6 @@ const Table = ({ classes = '', data = [] }) => {
             dispatch({ type: "previous" })
         }
     }
-
 
     return (
         <View classes='view-table'>
