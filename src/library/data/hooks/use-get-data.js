@@ -37,8 +37,7 @@ export default () => {
             const key = curr['date_captured'];
             const val = parseInt(curr['volume_per_day']);
             if (!count[key]) {
-                count[key] = { sum: val, data: { date_captured: key, volume_per_day: val } };
-                count[key].data.count = 1;
+                count[key] = { sum: val, data: { date_captured: key, volume_per_day: val, count: 1 } };
                 acc.push(count[key].data);
             }
             else {
