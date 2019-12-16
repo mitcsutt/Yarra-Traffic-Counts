@@ -42,7 +42,7 @@ const Dashboard = () => {
 					</Header>
 					<Card classes='graph-card'>
 						{fetching ?
-							<ReactLoading className='spinner' type='spin' color='blue' height={50} width={50} /> :
+							<ReactLoading className='spinner' type='spin' color='#59CD90' height={50} width={50} /> :
 							viewTable ? <Table data={data}></Table> : <Graph data={data}></Graph>
 						}
 					</Card>
