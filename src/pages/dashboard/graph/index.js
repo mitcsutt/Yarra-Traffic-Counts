@@ -2,7 +2,7 @@
  * External Dependencies
  */
 import React from 'react';
-import { VictoryChart, VictoryLine } from 'victory';
+import { VictoryChart, VictoryLine, VictoryCursorContainer } from 'victory';
 /**
  * Internal Dependencies
  */
@@ -13,7 +13,12 @@ const Graph = ({ data = [] }) => {
 
 	return (
 		<View classes='view-graph'>
-			<VictoryChart>
+			<VictoryChart padding={{ left: 90, top: 50, right: 10, bottom: 50 }} containerComponent={
+				<VictoryCursorContainer
+					cursorLabel={({ datum }) => `${Math.round(datum.y, 2)}`}
+				/>
+			}>
+
 				<VictoryLine
 					style={{
 						data: { stroke: "#c43a31" },
@@ -26,9 +31,10 @@ const Graph = ({ data = [] }) => {
 						onLoad: { duration: 1000 },
 					}}
 					x={(data) => new Date(data.date_captured)}
+
 					y="volume_per_day"
 				/>
 			</VictoryChart>
-		</View>);
+		</View >);
 }
 export default Graph;
