@@ -1,7 +1,7 @@
 Button
 =====
 
-Button is a simple styled button
+A simple styled button
 ******
 Props
 =====

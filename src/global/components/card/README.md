@@ -1,7 +1,7 @@
 Card
 =====
 
-Card is used to create simple cards used to dislay information on
+Card is used to create simple cards used to display information on
 ******
 Props
 =====

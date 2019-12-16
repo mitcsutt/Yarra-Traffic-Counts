@@ -68,6 +68,8 @@ const Table = ({ classes = '', data = [] }) => {
                                 rowsPerPage={pagination.perPage}
                                 page={pagination.currentPage}
                                 onChangePage={changePage}
+                                rowsPerPageOptions={[5, 10, 20, 50]}
+                                onChangeRowsPerPage={(e, perPage) => dispatch({ type: "update", total: data.length, perPage: perPage.key })}
                             />
                         </TableRow>
                     </TableFooter>
