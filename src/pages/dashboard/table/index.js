@@ -47,7 +47,7 @@ const Table = ({ classes = '', data = [] }) => {
                     <TableHead>
                         <TableRow>
                             <TableCell>Month</TableCell>
-                            <TableCell align="right">Volume Per Day</TableCell>
+                            <TableCell align="right">Average Volume Per Day</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>

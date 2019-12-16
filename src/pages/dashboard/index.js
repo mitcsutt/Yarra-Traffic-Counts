@@ -41,8 +41,10 @@ const Dashboard = () => {
 						<Button onClick={changeView} classes="header__button">{viewTable ? "Graph" : "Table"}</Button>
 					</Header>
 					<Card classes='graph-card'>
-						{viewTable ? <Table data={data}></Table> : <Graph data={data}></Graph>}
-
+						{fetching ?
+							<ReactLoading className='spinner' type='spin' color='blue' height={50} width={50} /> :
+							viewTable ? <Table data={data}></Table> : <Graph data={data}></Graph>
+						}
 					</Card>
 				</Main>
 			</Layout>
